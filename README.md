@@ -16,7 +16,7 @@ This is a Counter-Strike : Global Offensive Dedicated Server, using docker compo
 - You can connect directly using csgo console, running ```connect {public ip} {password}```. 
 - You can get the server public ip in [whatismyip](https://www.whatismyip.com/what-is-my-public-ip-address/)
 
-## sv_region values (SRCDS_REGION env variable)
+## SRCDS_REGION env variable
 | Value | Location        |
 |-------|-----------------|
 | 0     | US - East       |
