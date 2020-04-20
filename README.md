@@ -1,16 +1,16 @@
-#About
+# About
 This is a Counter-Strike : Global Offensive Dedicated Server, using docker compose.
 
-#Requirements
+# Requirements
 - Docker
 - Docker-compose
 
-#Configuration
+# Configuration
 - Create the ```.env``` file, based on the ```.env.example``` file.
 - Put your app token generated in [Steam dev website](https://steamcommunity.com/dev/managegameservers), in SRCDS_TOKEN .env variable 
 - You may need to free the port (configured in SRCDS_PORT env) in your router.
 
-#Usage
+# Usage
 - After the initial setup, you just need to run ```docker-compose up```
 - If you're connected in the same network, the server should appear in "Lan" tab, otherwise "Internet" tab.
 - You can connect directly using csgo console, running ```connect {public ip} {password}```. 
