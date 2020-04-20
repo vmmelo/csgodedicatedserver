@@ -7,7 +7,7 @@ This is a Counter-Strike : Global Offensive Dedicated Server, using docker compo
 
 # Configuration
 - Create the ```.env``` file, based on the ```.env.example``` file.
-- Put your app token generated in [Steam dev website](https://steamcommunity.com/dev/managegameservers), in SRCDS_TOKEN .env variable 
+- Put your app token (generated in [Steam dev website](https://steamcommunity.com/dev/managegameservers)), in SRCDS_TOKEN .env variable 
 - You may need to free the port (configured in SRCDS_PORT env) in your router.
 
 # Usage
