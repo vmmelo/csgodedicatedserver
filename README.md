@@ -8,7 +8,7 @@ This is a Counter-Strike : Global Offensive Dedicated Server, using docker compo
 # Configuration
 - Create the ```.env``` file, based on the ```.env.example``` file.
 - Put your app token (generated in [Steam dev website](https://steamcommunity.com/dev/managegameservers)), in SRCDS_TOKEN .env variable 
-- You may need to free the port (configured in SRCDS_PORT env) in your router.
+- You may need to portfoward (configured in SRCDS_PORT env) in your router and system.
 
 # Usage
 - After the initial setup, you just need to run ```docker-compose up```
@@ -28,3 +28,7 @@ This is a Counter-Strike : Global Offensive Dedicated Server, using docker compo
 | 6     | Middle East     |
 | 7     | Africa          |
 | 255   | World (default) |
+
+# Alternative
+You can ```docker run``` command like this:
+docker run --name csgoserver -p 27015:27015 -v /$(pwd)/csgo:/home/steam/csgo-dedicated/csgo/ --publish 27015 --restart always --tty -e "SRCDS_TOKEN=E33F671D21F20E2E0C9BA5FFF2AB2A7D" -e "SRCDS_RCONPW=rala" -e "SRCDS_PORT=27015" -e "SRCDS_TV_PORT=27020" -e "SRCDS_FPSMAX=300" -e "SRCDS_TICKRATE=128" -e "SRCDS_MAXPLAYERS=10" -e "SRCDS_STARTMAP=de_dust2" -e "SRCDS_REGION=2" -e "SRCDS_MAPGROUP=mg_active" -d cm2network/csgo:latest
